@@ -1,0 +1,7 @@
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/models/Emprunt.java
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/models/Abonnement.java
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/models/Livre.java
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/persistence/ConnectionManager.java
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/test/ModeleTest.java
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/models/Membre.java
+/mnt/c/IN205/GIT/LibraryManager/librarymanager/src/main/java/com/ensta/librarymanager/utils/FillDatabase.java
