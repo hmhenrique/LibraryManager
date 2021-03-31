@@ -9,6 +9,14 @@ public class Emprunt {
     private Membre eMembre;
     private Livre eLivre;
     private LocalDate dateEmprunt, dateRetour;
+    private int id;
+
+    /**
+     * Default constructor
+     */
+    public Emprunt(){
+        super();
+    }
 
     /**
      * Constructor
@@ -18,16 +26,33 @@ public class Emprunt {
      * @param dateRetour
      */
     public Emprunt(Membre eMembre, Livre eLivre, LocalDate dateEmprunt, LocalDate dateRetour){
+        this();
         this.eMembre = eMembre;
         this.eLivre = eLivre;
         this.dateEmprunt = dateEmprunt;
         this.dateRetour = dateRetour;
     }
+
+    /**
+     * Constructor
+     * @param id
+     * @param eMembre
+     * @param eLivre
+     * @param dateEmprunt
+     * @param dateRetour
+     */
+    public Emprunt(int id, Membre eMembre, Livre eLivre, LocalDate dateEmprunt, LocalDate dateRetour){
+        this(eMembre, eLivre, dateEmprunt, dateRetour);
+        this.id =id;
+    }
     
     /**
-     * Default constructor
+     * Getter loan ID
+     * @return id of a loan
      */
-    public Emprunt(){}
+    public int getId(){
+        return this.id;
+   }
 
     /**
      * Getter member

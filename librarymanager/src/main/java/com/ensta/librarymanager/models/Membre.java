@@ -7,8 +7,16 @@ public class Membre {
 
     private String nom, prenom, email, telephone, adresse;
     private Abonnement abonnement;
+    private int id;
 
     /**
+     * Default consctrutor
+     */
+    public Membre() {
+		super();
+	}
+
+        /**
      * Constructor
      * @param nom
      * @param prenom
@@ -18,6 +26,7 @@ public class Membre {
      * @param abonnement
      */
     public Membre(String nom, String prenom, String email, String telephone, String adresse, Abonnement abonnement){
+        this();
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -25,11 +34,30 @@ public class Membre {
         this.adresse = adresse;
         this.abonnement = abonnement;
     }
+
+    /**
+     * Constructor
+     * @param id
+     * @param nom
+     * @param prenom
+     * @param email
+     * @param telephone
+     * @param adresse
+     * @param abonnement
+     */
+    public Membre(int id, String nom, String prenom, String email, String telephone, String adresse, Abonnement abonnement){
+        this(nom, prenom, email, telephone, adresse, abonnement);
+        this.id = id;
+    }
+    
     
     /**
-     * Default consctrutor
+     * Getter member ID
+     * @return id of a member
      */
-    public Membre(){}
+    public int getId(){
+         return this.id;
+    }
 
     /**
      * Getter nom

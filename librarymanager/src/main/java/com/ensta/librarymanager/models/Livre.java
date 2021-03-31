@@ -6,7 +6,15 @@ package com.ensta.librarymanager.models;
 public class Livre {
 
     private String titre, auteur, isbn;
+    private int id;
 
+
+    /**
+     * Default Constructor
+     */
+    public Livre(){
+        super();
+    }
 
     /**
      * Constructor
@@ -15,15 +23,31 @@ public class Livre {
      * @param isbn
      */
     public Livre(String titre, String auteur, String isbn){
+        this();
         this.titre = titre;
         this.auteur = auteur;
         this.isbn = isbn;
     }
 
     /**
-     * Default Constructor
+     * Constructor
+     * @param id
+     * @param titre
+     * @param auteur
+     * @param isbn
      */
-    public Livre(){}
+    public Livre(int id, String titre, String auteur, String isbn){
+        this(titre, auteur, isbn);
+        this.id = id;
+    }
+
+    /**
+     * Getter book ID
+     * @return id of a book
+     */
+    public int getId(){
+        return this.id;
+   }
 
 
     /**
