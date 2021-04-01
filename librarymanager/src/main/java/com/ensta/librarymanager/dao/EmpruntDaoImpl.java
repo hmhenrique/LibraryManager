@@ -278,7 +278,7 @@ public class EmpruntDaoImpl implements EmpruntDao {
      * Creat one 'emprunt' 
      * @param idMembre Member id
      * @param idLivre Book id
-     * @param dateLoan 'emprunt' date
+     * @param dateEmprunt 'emprunt' date
      */
 	@Override
 	public void create(int idMembre, int idLivre, LocalDate dateEmprunt) throws DaoException{

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ensta.AppTest" time="0.044" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ensta.AppTest" time="0.051" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
@@ -14,7 +14,7 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/IN205/GIT/LibraryManager/librarymanager/target/surefire/surefirebooter5494098805420659083.jar /mnt/c/IN205/GIT/LibraryManager/librarymanager/target/surefire 2021-03-31T20-06-58_103-jvmRun1 surefire15447494831639968848tmp surefire_02202515188551313689tmp"/>
+    <property name="sun.java.command" value="/mnt/c/IN205/GIT/LibraryManager/librarymanager/target/surefire/surefirebooter12636637673878095351.jar /mnt/c/IN205/GIT/LibraryManager/librarymanager/target/surefire 2021-04-01T16-57-57_783-jvmRun1 surefire6088068122433387801tmp surefire_015252835376671350972tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/IN205/GIT/LibraryManager/librarymanager/target/test-classes:/mnt/c/IN205/GIT/LibraryManager/librarymanager/target/classes:/home/ubuntuh/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ubuntuh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ubuntuh/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/ubuntuh/.m2/repository/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar:/home/ubuntuh/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/home/ubuntuh/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/mnt/c/IN205/GIT/LibraryManager/librarymanager/target/surefire/surefirebooter5494098805420659083.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/IN205/GIT/LibraryManager/librarymanager/target/surefire/surefirebooter12636637673878095351.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="ubuntuh"/>

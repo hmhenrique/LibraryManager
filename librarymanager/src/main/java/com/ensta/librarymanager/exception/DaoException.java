@@ -8,6 +8,8 @@ public class DaoException extends Exception {
 
 	public DaoException(String message, Throwable cause) {
 		super(message, cause);
+		System.out.println("\n");
+		cause.printStackTrace();
 	}
 
 	public DaoException(String message) {
