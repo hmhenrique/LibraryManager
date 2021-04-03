@@ -1,10 +1,10 @@
 # LibraryManager
 
-ENSTA - IN205
+**ENSTA - IN205**
 
-Henrique MORAU RODRIGUES
+**Henrique MORAU RODRIGUES**
 
-### Instructions:
+## Instructions:
 
 Maven a été utilisé.
 
