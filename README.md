@@ -2,7 +2,7 @@
 
 ENSTA - IN205
 
-Henrique Rodrigues
+Henrique MORAU RODRIGUES
 
 ### Instructions:
 
@@ -15,6 +15,10 @@ Pour installer (sur Ubuntu) :
 Pour éxécuter :
 
 > mvn clean install tomcat7:run
+
+Et aller sur le web browser pour accéder le host :
+
+> http://localhost:8080/TP3Ensta
 
 Pour faire un "reset" du Database :
 
