@@ -9,7 +9,7 @@ import com.ensta.librarymanager.dao.*;
 import com.ensta.librarymanager.models.*;
 
 /**
- * Class to test the implemented daos
+ * Tests the implemented daos
  */
 public class DaoTest{
 	public static void main(String[] args) throws Exception {

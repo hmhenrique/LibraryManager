@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>  <!-- for the accents of the words -->
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
@@ -27,18 +28,25 @@
                         <th>Titre</th>
                         <th>Auteur</th>
                         <th>Code ISBN 13</th>
-                        <th>Détails</th>
+                        <th>DÃ©tails</th>
                     </tr>
                 </thead>
                 <tbody>
                 
-                    <tr>
-                        <td>Titre du livre</td>
-                        <td>Nom de l'auteur</td>
-                        <td>ISBN du livre</td>
-                        <td class="center"><a href="livre_details?id=idDuLivre"><ion-icon class="details" name="information-circle-outline"></ion-icon></a></td>
+
+
+                  <c:if test="${!listLivre.isEmpty()}">
+                    <c:forEach items="${listLivre}" var="livre">
+                      <tr>
+                        <td>${livre.titre}</td>
+                        <td>${livre.auteur}</td>
+                        <td>${livre.ISBN}</td>
+                        <td class="center"><a href="livre_details?id=${livre.id}"><ion-icon class="details" name="information-circle-outline"></ion-icon></a></td>
                     </tr>
-                    
+                    </c:forEach>
+                  </c:if>
+
+
                     <!-- TODO : parcourir la liste des livres et les afficher selon la structure d'exemple ci-dessus -->
                 </tbody>
             </table>

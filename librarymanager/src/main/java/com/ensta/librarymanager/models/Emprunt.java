@@ -34,7 +34,7 @@ public class Emprunt {
     }
 
     /**
-     * Constructor
+     * Constructor with id
      * @param id
      * @param eMembre
      * @param eLivre
@@ -121,6 +121,7 @@ public class Emprunt {
 
     /**
      * update toString method to reference all class variables
+     * @return the String
      */
     @Override
     public String toString(){

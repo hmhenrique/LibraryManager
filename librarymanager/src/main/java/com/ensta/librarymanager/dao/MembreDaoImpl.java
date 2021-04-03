@@ -131,7 +131,7 @@ public class MembreDaoImpl implements MembreDao {
      * @param adresse
      * @param email
      * @param telephone
-     * @param subscription
+     * @param abonnement
      * @return the new member'id
      */
     @Override

@@ -14,10 +14,10 @@ public class EmpruntDaoImpl implements EmpruntDao {
     private static EmpruntDaoImpl instance;
     private EmpruntDaoImpl(){};
     public static EmpruntDaoImpl getInstance(){
-        if (instance == null)   instance = new EmpruntDaoImpl();
+        if (instance == null)
+           instance = new EmpruntDaoImpl();
         return instance;
     }
-
 
 	
     private static final String selectAllQuery = "SELECT e.id AS id, idMembre, nom, prenom, adresse, email, telephone, abonnement, idLivre, titre, auteur, isbn, dateEmprunt, dateRetour FROM emprunt AS e INNER JOIN membre ON membre.id = e.idMembre INNER JOIN livre ON livre.id = e.idLivre ORDER BY dateRetour DESC;";
@@ -78,7 +78,7 @@ public class EmpruntDaoImpl implements EmpruntDao {
 	}
 
 	/**
-     * Get currents lists of emprunts not returned yet
+     * Get currents lists of 'emprunts' not returned yet
 	 * @return the list
      */
     @Override
@@ -125,7 +125,7 @@ public class EmpruntDaoImpl implements EmpruntDao {
 	}
 
 	/**
-     * Get currents lists of emprunts not returned yet by member
+     * Get currents lists of 'emprunts' not returned yet by member
 	 * @param idMembre member's id
 	 * @return the list
      */
@@ -174,7 +174,7 @@ public class EmpruntDaoImpl implements EmpruntDao {
 	}
 
 	/**
-     * Get currents lists of emprunts not returned yet by book
+     * Get currents lists of 'emprunts' not returned yet by book
 	 * @param idLivre book's id
 	 * @return the list
      */

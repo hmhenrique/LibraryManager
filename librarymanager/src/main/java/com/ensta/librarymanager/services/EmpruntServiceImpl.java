@@ -16,13 +16,14 @@ public class EmpruntServiceImpl implements EmpruntService {
     private static EmpruntServiceImpl instance;
     private EmpruntServiceImpl(){};
     public static EmpruntServiceImpl getInstance(){
-        if (instance == null)   instance = new EmpruntServiceImpl();
+        if (instance == null)
+           instance = new EmpruntServiceImpl();
         return instance;
     }
 
     /**
      * get a list of all 'emprunts'
-     * @return List of total loans in DB
+     * @return List of total 'emprunts' in DB
      */
     @Override
     public List<Emprunt> getList() throws ServiceException{
@@ -41,7 +42,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
 
     /**
-     * get a list of loans actives
+     * get a list of 'emprunts' actives
      * @return The list 
      */
     @Override
@@ -61,7 +62,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
 
     /**
-     * Loan list by member
+     * 'emprunts' list by member
      * @param idMembre
      * @return The list by members
      */
@@ -80,6 +81,11 @@ public class EmpruntServiceImpl implements EmpruntService {
     }
 
 
+    /**
+     * 'emprunts' list by book
+     * @param idLivre
+     * @return The list by book
+     */
 	public List<Emprunt> getListCurrentByLivre(int idLivre) throws ServiceException{
         
         List<Emprunt> empruntLivresList = new ArrayList<Emprunt>();
@@ -97,7 +103,7 @@ public class EmpruntServiceImpl implements EmpruntService {
     /**
      * Get the 'emprunt' with the ID
      * @param id 
-     * @return The loan's id
+     * @return The 'emprunt'
      */
 	public Emprunt getById(int id) throws ServiceException{
 
@@ -134,7 +140,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
 
     /**
-     * Update the returneDate of a returned loan
+     * Update the returneDate of a returned 'emprunt'
      * @param id
      */
     @Override
@@ -147,7 +153,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             empruntToUpdate.setDateRetour(LocalDate.now());
             empruntDao.update(empruntToUpdate);
 
-            System.out.println("\n  Book returned, loan updated " + empruntToUpdate);
+            System.out.println("\n Book returned, loan updated " + empruntToUpdate);
         } catch (Exception e) {
             throw new ServiceException("\n Can't be returned yet.", e);
         }
@@ -156,8 +162,8 @@ public class EmpruntServiceImpl implements EmpruntService {
 
 
     /**
-     * count the number of loans
-     * @return the number of loans
+     * count the number of 'emprunts'
+     * @return the number of 'emprunts'
      */
     @Override
 	public int count() throws ServiceException{
@@ -196,7 +202,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
 
 	/**
-     * Check if a member can get books
+     * Check if a member can get books (check the type of subscription)
      * @param Membre
      * @return true if is disponible and false if not
      */
@@ -206,12 +212,14 @@ public class EmpruntServiceImpl implements EmpruntService {
         EmpruntDao empruntDao = EmpruntDaoImpl.getInstance();
 
         try {
-            dispo = empruntDao.getListCurrentByMembre(membre.getId()).isEmpty();
+            if((membre.getAbonnement() == Abonnement.BASIC && empruntDao.getListCurrentByMembre(membre.getId()).size() < 2) 
+            || (membre.getAbonnement() == Abonnement.PREMIUM && empruntDao.getListCurrentByMembre(membre.getId()).size() < 5) 
+            || (membre.getAbonnement() == Abonnement.VIP && empruntDao.getListCurrentByMembre(membre.getId()).size() < 20))
+                dispo = true;
             System.out.println("\n The member can get another book?: " + dispo);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return dispo;
 	}
-
 }

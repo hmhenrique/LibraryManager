@@ -30,7 +30,7 @@ public class Livre {
     }
 
     /**
-     * Constructor
+     * Constructor with id
      * @param id
      * @param titre
      * @param auteur
@@ -100,6 +100,7 @@ public class Livre {
 
     /**
      * update toString method to reference all class variables
+     * @return the String
      */
     @Override
     public String toString(){

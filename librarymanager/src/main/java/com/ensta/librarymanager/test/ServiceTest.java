@@ -16,9 +16,9 @@ public class ServiceTest {
     public static void main(String[] args) throws Exception{
         FillDatabase.main(args);
 
-        //membreTest();
+        membreTest();
         //livreTest();
-        empruntTest();
+        //empruntTest();
         
     }
     
@@ -30,8 +30,11 @@ public class ServiceTest {
         MembreService membreService = MembreServiceImpl.getInstance();
 
         membreService.getList();
+
         membreService.getListMembreEmpruntPossible();
+
         membreService.getById(5);
+
         membreService.create("Rodrigues", "Henrique", "ENSTA", "henrique@email.fr", "+33071234567", Abonnement.VIP);
         //membreService.create("", "Henrique", "ENSTA", "henrique@email.fr", "+33071234567", Abonnement.VIP);
         //membreService.create("Rodrigues", "", "ENSTA", "henrique@email.fr", "+33071234567", Abonnement.VIP);
@@ -56,8 +59,11 @@ public class ServiceTest {
         LivreService livreService = LivreServiceImpl.getInstance();
 
         livreService.getList();
+
         livreService.getListDispo();
+
         livreService.getById(7);
+
         livreService.create("My Book", "My Autor", "123456");
         //livreService.create("", "My Autor", "123456");
         livreService.getList();
@@ -83,9 +89,13 @@ public class ServiceTest {
         EmpruntService empruntService = EmpruntServiceImpl.getInstance();
 
         empruntService.getList();
+
         empruntService.getListCurrent();
+
         empruntService.getListCurrentByMembre(5);
+        
         empruntService.getListCurrentByLivre(2);
+
         empruntService.getById(3);
 
         empruntService.create(3, 2, LocalDate.now());

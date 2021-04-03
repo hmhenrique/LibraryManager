@@ -15,13 +15,14 @@ public class LivreServiceImpl implements LivreService {
     private static LivreServiceImpl instance;
     private LivreServiceImpl(){};
     public static LivreServiceImpl getInstance(){
-        if (instance == null)   instance = new LivreServiceImpl();
+        if (instance == null)
+           instance = new LivreServiceImpl();
         return instance;
     }
 
     /**
      * get a list of all books
-     * @return List of total members in DB
+     * @return List of total books in DB
      */
     @Override
     public List<Livre> getList() throws ServiceException{
@@ -66,7 +67,7 @@ public class LivreServiceImpl implements LivreService {
     /**
      * Get the book with the ID
      * @param id 
-     * @return The id's book
+     * @return The book
      */
     @Override
 	public Livre getById(int id) throws ServiceException{
@@ -123,9 +124,7 @@ public class LivreServiceImpl implements LivreService {
             if (livre.getTitre() == null || livre.getTitre() == ""){
                 throw new ServiceException("\n Empty Title! Can't update the book.");
             } else{
-                livre.setTitre(livre.getTitre().toUpperCase());
                 livreDao.update(livre);
-
                 System.out.println("\n Book successfully updated.");
             }
         } catch (Exception e) {
@@ -170,5 +169,4 @@ public class LivreServiceImpl implements LivreService {
         }
         return total;
     }
-
 }

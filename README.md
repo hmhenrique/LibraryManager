@@ -14,5 +14,8 @@ Pour installer (sur Ubuntu) :
 
 Pour éxécuter :
 
+> mvn clean install tomcat7:run
+
+Pour faire un "reset" du Database :
+
 > mvn clean install exec:java
->

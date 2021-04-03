@@ -15,7 +15,8 @@ public class MembreServiceImpl implements MembreService {
     private static MembreServiceImpl instance;
     private MembreServiceImpl(){};
     public static MembreServiceImpl getInstance(){
-        if (instance == null)   instance = new MembreServiceImpl();
+        if (instance == null)
+           instance = new MembreServiceImpl();
         return instance;
     }
 
@@ -70,7 +71,7 @@ public class MembreServiceImpl implements MembreService {
     /**
      * Get the member with the ID
      * @param id 
-     * @return The member's id
+     * @return The member
      */
     @Override
 	public Membre getById(int id) throws ServiceException{
@@ -93,7 +94,7 @@ public class MembreServiceImpl implements MembreService {
      * @param adresse
      * @param email
      * @param telephone
-     * @param subscription
+     * @param abonnement
      * @return The id of the member created
      */
     @Override

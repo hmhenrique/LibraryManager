@@ -13,7 +13,8 @@ public class LivreDaoImpl implements LivreDao {
     private static LivreDaoImpl instance;
     private LivreDaoImpl(){};
     public static LivreDaoImpl getInstance(){
-        if (instance == null) instance = new LivreDaoImpl();
+        if (instance == null)
+            instance = new LivreDaoImpl();
         return instance;
     }
 
@@ -25,7 +26,7 @@ public class LivreDaoImpl implements LivreDao {
     private static final String deleteQuery = "DELETE FROM livre WHERE id=?;";
 
     /**
-     * Function that returns all livres in the database
+     * Function that returns all books in the database
      * @return the list
      */
     @Override
@@ -247,6 +248,7 @@ public class LivreDaoImpl implements LivreDao {
 
     /**
      * Make the count of all books
+     * @return the total value
      */
     @Override
 	public int count() throws DaoException{

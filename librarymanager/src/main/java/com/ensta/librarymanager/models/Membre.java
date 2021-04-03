@@ -16,7 +16,7 @@ public class Membre {
 		super();
 	}
 
-        /**
+    /**
      * Constructor
      * @param nom
      * @param prenom
@@ -36,7 +36,7 @@ public class Membre {
     }
 
     /**
-     * Constructor
+     * Constructor with id
      * @param id
      * @param nom
      * @param prenom
@@ -157,6 +157,7 @@ public class Membre {
 
     /**
      * update toString method to reference all class variables
+     * @return the String
      */
     @Override
     public String toString(){
